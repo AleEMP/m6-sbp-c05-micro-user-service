@@ -1,0 +1,7 @@
+/Users/jgomez/git_codigo/m6-sbp-c05-micro-user-service/src/main/java/com/tecsup/app/micro/user/UserServiceApplication.java
+/Users/jgomez/git_codigo/m6-sbp-c05-micro-user-service/src/main/java/com/tecsup/app/micro/user/controller/UserController.java
+/Users/jgomez/git_codigo/m6-sbp-c05-micro-user-service/src/main/java/com/tecsup/app/micro/user/dto/User.java
+/Users/jgomez/git_codigo/m6-sbp-c05-micro-user-service/src/main/java/com/tecsup/app/micro/user/entity/UserEntity.java
+/Users/jgomez/git_codigo/m6-sbp-c05-micro-user-service/src/main/java/com/tecsup/app/micro/user/mapper/UserMapper.java
+/Users/jgomez/git_codigo/m6-sbp-c05-micro-user-service/src/main/java/com/tecsup/app/micro/user/repository/UserRepository.java
+/Users/jgomez/git_codigo/m6-sbp-c05-micro-user-service/src/main/java/com/tecsup/app/micro/user/service/UserService.java
