@@ -16,8 +16,16 @@ pipeline {
         }
         stage('Test') {
             steps {
-                 echo 'Testing..'
+                echo 'Test the project'
+                sh 'mvn test'
+            }
+        }
+        stage('Package') {
+            steps {
+                echo 'Package the project'
+                sh 'mvn package -DskipTests'
             }
         }
     }
+
 }
