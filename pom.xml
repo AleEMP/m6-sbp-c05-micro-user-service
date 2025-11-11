@@ -60,6 +60,7 @@
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+
         <!-- Add H2 dependency -->
         <dependency>
             <groupId>com.h2database</groupId>
