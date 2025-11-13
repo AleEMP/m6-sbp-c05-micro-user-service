@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="073f0af1-404a-4106-9397-5130640c081e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/dto/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/tecsup/app/micro/user/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/tecsup/app/micro/user/mapper/UserMapperImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="073f0af1-404a-4106-9397-5130640c081e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +104,7 @@
       <workItem from="1762824392945" duration="6434000" />
       <workItem from="1762997166945" duration="2453000" />
       <workItem from="1763005818484" duration="1684000" />
-      <workItem from="1763062983612" duration="1458000" />
+      <workItem from="1763062983612" duration="1814000" />
     </task>
     <servers />
   </component>
