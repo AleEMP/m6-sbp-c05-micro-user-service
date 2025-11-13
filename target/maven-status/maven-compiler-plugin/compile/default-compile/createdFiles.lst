@@ -1,4 +1,5 @@
 com\tecsup\app\micro\user\UserServiceApplication.class
+com\tecsup\app\micro\user\dto\UserRequest.class
 com\tecsup\app\micro\user\repository\UserRepository.class
 com\tecsup\app\micro\user\service\UserService.class
 com\tecsup\app\micro\user\dto\User$UserBuilder.class

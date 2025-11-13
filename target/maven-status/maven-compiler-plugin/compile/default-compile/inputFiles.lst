@@ -1,7 +1,8 @@
-D:\BootCamp\Spring Boot PRO\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\controller\UserController.java
-D:\BootCamp\Spring Boot PRO\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\dto\User.java
-D:\BootCamp\Spring Boot PRO\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\entity\UserEntity.java
-D:\BootCamp\Spring Boot PRO\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\mapper\UserMapper.java
-D:\BootCamp\Spring Boot PRO\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\repository\UserRepository.java
-D:\BootCamp\Spring Boot PRO\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\service\UserService.java
-D:\BootCamp\Spring Boot PRO\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\UserServiceApplication.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\controller\UserController.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\dto\User.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\dto\UserRequest.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\entity\UserEntity.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\mapper\UserMapper.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\repository\UserRepository.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\service\UserService.java
+D:\TodoAprendizaje\CursoFullStackJavaTECSUP\ClasesGrabadas\6-SpringExperto\Projects\m6-sbp-c05-micro-user-service-colaborative\m6-sbp-c05-micro-user-service\src\main\java\com\tecsup\app\micro\user\UserServiceApplication.java

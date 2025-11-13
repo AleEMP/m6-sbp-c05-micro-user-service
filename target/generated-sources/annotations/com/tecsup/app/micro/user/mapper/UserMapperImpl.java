@@ -1,6 +1,7 @@
 package com.tecsup.app.micro.user.mapper;
 
 import com.tecsup.app.micro.user.dto.User;
+import com.tecsup.app.micro.user.dto.UserRequest;
 import com.tecsup.app.micro.user.entity.UserEntity;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-11-12T21:06:17-0500",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.12 (Oracle Corporation)"
+    date = "2025-11-13T15:05:54-0500",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.8 (Oracle Corporation)"
 )
 @Component
 public class UserMapperImpl implements UserMapper {
@@ -41,6 +42,22 @@ public class UserMapperImpl implements UserMapper {
         UserEntity userEntity = new UserEntity();
 
         userEntity.setId( domain.getId() );
+        userEntity.setName( domain.getName() );
+        userEntity.setEmail( domain.getEmail() );
+        userEntity.setPhone( domain.getPhone() );
+        userEntity.setAddress( domain.getAddress() );
+
+        return userEntity;
+    }
+
+    @Override
+    public UserEntity toEntity(UserRequest domain) {
+        if ( domain == null ) {
+            return null;
+        }
+
+        UserEntity userEntity = new UserEntity();
+
         userEntity.setName( domain.getName() );
         userEntity.setEmail( domain.getEmail() );
         userEntity.setPhone( domain.getPhone() );
