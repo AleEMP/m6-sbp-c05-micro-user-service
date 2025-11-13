@@ -22,7 +22,8 @@ public class UserService {
 
         UserEntity entity = userRepository.findById(id).orElse(null);
 
-        return  mapper.toDomain(entity);
+        //return  mapper.toDomain(entity);
+        return null;
     }
 
     public List<User> getAllUsers() {

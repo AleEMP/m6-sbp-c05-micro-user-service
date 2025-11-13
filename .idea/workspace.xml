@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="073f0af1-404a-4106-9397-5130640c081e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/dto/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762824392784</updated>
       <workItem from="1762824392945" duration="6434000" />
-      <workItem from="1762997166945" duration="173000" />
+      <workItem from="1762997166945" duration="358000" />
     </task>
     <servers />
   </component>
