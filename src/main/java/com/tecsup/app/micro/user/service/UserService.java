@@ -4,10 +4,12 @@ import com.tecsup.app.micro.user.dto.User;
 import com.tecsup.app.micro.user.entity.UserEntity;
 import com.tecsup.app.micro.user.mapper.UserMapper;
 import com.tecsup.app.micro.user.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -30,5 +32,15 @@ public class UserService {
         List<UserEntity> entities = userRepository.findAll();
         return this.mapper.toDomain(entities);
 
+    }
+    @Transactional
+    public boolean deleteUser(Long id) {
+        Optional<UserEntity> userOptional = userRepository.findById(id); // ¡CAMBIO! Usamos UserEntity
+
+        if (userOptional.isEmpty()) {
+            return false;
+        }
+        userRepository.deleteById(id);
+        return true;
     }
 }
