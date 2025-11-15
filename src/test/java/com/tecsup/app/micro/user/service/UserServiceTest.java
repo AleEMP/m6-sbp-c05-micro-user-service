@@ -1,8 +1,10 @@
 package com.tecsup.app.micro.user.service;
 
 import com.tecsup.app.micro.user.dto.User;
+import com.tecsup.app.micro.user.entity.UserEntity;
 import com.tecsup.app.micro.user.mapper.UserMapper;
 import com.tecsup.app.micro.user.repository.UserRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,4 +83,31 @@ class UserServiceTest {
         verify(userRepository, times(1)).deleteById(ID);
     }
 
+
+    @Test
+    void testCreateUser(){
+        Long ID = 50L;
+        String NAME = "Juana";
+        String EMAIL = "juana@demo.com";
+        String PHONE = "965324122";
+        String ADDRESS = "Av. Larco Miraflores";
+
+        // Initial Condition
+        UserEntity newUser = new UserEntity(null, NAME, EMAIL, PHONE, ADDRESS); // UserRequest
+        UserEntity savedUser = new UserEntity(ID, NAME, EMAIL, PHONE, ADDRESS);  // Save UserEntity
+
+        // Mocking the repository behavior
+        when(userRepository.save(newUser)).thenReturn(savedUser);
+
+        // Execute the service method
+        User realUser = userService.createUser(userMapper.toDomain(newUser));
+
+        // Validate the results
+        assertNotNull(realUser);
+        assertEquals(ID, realUser.getId());
+        assertEquals(NAME, realUser.getName());
+        assertEquals(EMAIL, realUser.getEmail());
+        assertEquals(PHONE, realUser.getPhone());
+        assertEquals(ADDRESS, realUser.getAddress());
+    }
 }

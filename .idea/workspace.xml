@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="073f0af1-404a-4106-9397-5130640c081e" name="Changes" comment="" />
+    <list default="true" id="073f0af1-404a-4106-9397-5130640c081e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tecsup/app/micro/user/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tecsup/app/micro/user/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/dto/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/dto/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/dto/UserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/dto/UserRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/dto/UserResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/dto/UserResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecsup/app/micro/user/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/tecsup/app/micro/user/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/tecsup/app/micro/user/mapper/UserMapperImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,9 +82,10 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "features__new__rf",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/BootCamp/Spring Boot PRO/m6-sbp-c05-micro-user-service",
+    "last_opened_file_path": "C:/ARCHIVOS/PROYECTO/Conjunto/m6-sbp-c05-micro-user-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,7 +94,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.UserServiceApplication">
+  <component name="RunManager" selected="JUnit.UserServiceTest">
     <configuration name="UserServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tecsup.app.micro.user.UserServiceApplication" />
       <module name="user-service" />
@@ -170,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="Application.UserServiceApplication" />
         <item itemvalue="JUnit.UserServiceTest.testDeleteUser" />
         <item itemvalue="JUnit.UserServiceTest.testDeleteUser_Success" />
         <item itemvalue="JUnit.UserServiceTest.getUserById" />
-        <item itemvalue="JUnit.UserServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,5 +204,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tecsup/app/micro/user/service/UserService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

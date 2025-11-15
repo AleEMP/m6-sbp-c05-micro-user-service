@@ -49,6 +49,7 @@ public class UserService {
     public User createUser(User user){
         validateUserInput(user);
         UserEntity entity = this.mapper.toEntity(user);
+        UserEntity ent = userRepository.save(entity);
         return this.mapper.toDomain(userRepository.save(entity));
     }
 
