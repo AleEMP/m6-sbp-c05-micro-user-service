@@ -36,7 +36,7 @@ public class UserService {
     }
     @Transactional
     public boolean deleteUser(Long id) {
-        Optional<UserEntity> userOptional = userRepository.findById(id); // ¡CAMBIO! Usamos UserEntity
+        Optional<UserEntity> userOptional = userRepository.findById(id);
 
         if (userOptional.isEmpty()) {
             return false;

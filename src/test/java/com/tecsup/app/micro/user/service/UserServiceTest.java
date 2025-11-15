@@ -40,7 +40,7 @@ class UserServiceTest {
                 .build(); // new User(ID, NAME, EMAIL);
 
         // Mocking the repository behavior
-        when(userRepository.findById(1L)).thenReturn(Optional.of(userMapper.toEntity(existingUser)));
+        when(userRepository.findById(100L)).thenReturn(Optional.of(userMapper.toEntity(existingUser)));
 
         // Execute the service method
         User realUser = userService.getUserById(100L);
