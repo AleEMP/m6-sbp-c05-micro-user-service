@@ -1,6 +1,8 @@
 package com.tecsup.app.micro.user.mapper;
 
 import com.tecsup.app.micro.user.dto.User;
+import com.tecsup.app.micro.user.dto.UserRequest;
+import com.tecsup.app.micro.user.dto.UserResponse;
 import com.tecsup.app.micro.user.entity.UserEntity;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-11-13T22:13:00-0500",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.12 (Oracle Corporation)"
+    date = "2025-11-14T21:24:17-0500",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.14 (Oracle Corporation)"
 )
 @Component
 public class UserMapperImpl implements UserMapper {
@@ -61,5 +63,44 @@ public class UserMapperImpl implements UserMapper {
         }
 
         return list;
+    }
+
+    @Override
+    public User toDomain(UserRequest request) {
+        if ( request == null ) {
+            return null;
+        }
+
+        User.UserBuilder user = User.builder();
+
+        user.name( request.getName() );
+        user.email( request.getEmail() );
+        user.phone( request.getPhone() );
+        user.address( request.getAddress() );
+
+        return user.build();
+    }
+
+    @Override
+    public UserResponse toResponse(User createUser) {
+        if ( createUser == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String name = null;
+        String email = null;
+        String phone = null;
+        String address = null;
+
+        id = createUser.getId();
+        name = createUser.getName();
+        email = createUser.getEmail();
+        phone = createUser.getPhone();
+        address = createUser.getAddress();
+
+        UserResponse userResponse = new UserResponse( id, name, email, phone, address );
+
+        return userResponse;
     }
 }

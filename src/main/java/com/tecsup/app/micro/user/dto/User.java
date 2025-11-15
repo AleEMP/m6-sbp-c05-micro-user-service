@@ -15,6 +15,13 @@ public class User {
     private String email;
     private String phone;
     private String address;
+
+    public boolean hasValidEmail() {
+        return email != null &&
+                email.contains("@") &&
+                email.contains(".") &&
+                email.length() > 5;
+    }
 }
 
 //Comment

@@ -6,6 +6,7 @@ import com.tecsup.app.micro.user.mapper.UserMapper;
 import com.tecsup.app.micro.user.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor
 public class UserService {
-
+    @Autowired
     private final UserRepository userRepository;
     private final UserMapper mapper;
 
@@ -42,5 +43,17 @@ public class UserService {
         }
         userRepository.deleteById(id);
         return true;
+    }
+
+    @Transactional
+    public User createUser(User user){
+        validateUserInput(user);
+        UserEntity entity = this.mapper.toEntity(user);
+        return this.mapper.toDomain(userRepository.save(entity));
+    }
+
+    private void validateUserInput(User newUser) {
+         if (!newUser.hasValidEmail())
+            throw new RuntimeException("Invalid user data: Invalid email");
     }
 }
