@@ -20,18 +20,27 @@ public class UserController {
 
     private final UserService userService;
 
+    /**
+     *
+     * @return
+     */
     @GetMapping
     public List<User> getAllUsers() {
         log.info("REST request to get all users");
         return userService.getAllUsers();
     }
 
-
+    /**
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         log.info("REST request to get user by id: {}", id);
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
+    // Demo again
 
 }
