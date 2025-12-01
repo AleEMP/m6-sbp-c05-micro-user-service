@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        docker 'my-docker-tool'
+    }
+
     environment {
         DOCKER_IMAGE = 'aleemp/m6-sbp-c05-micro-user-service'
         DOCKER_TAG = 'latest'
@@ -16,27 +20,23 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                echo 'Compilando y Ejecutando Pruebas Unitarias/Integración...'
                 sh './mvnw clean package'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                echo 'Construyendo imagen Docker...'
-                script {
-                    // Construye la imagen usando el Dockerfile del proyecto
-                    dockerImage = docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}")
-                }
+                sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
             }
         }
 
         stage('Push to Docker Hub') {
             steps {
-                echo 'Subiendo imagen a Docker Hub...'
                 script {
-                    docker.withRegistry('', DOCKER_CREDS_ID) {
-                        dockerImage.push()
+                    withCredentials([usernamePassword(credentialsId: DOCKER_CREDS_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                        sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                        sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                        sh 'docker logout'
                     }
                 }
             }
@@ -45,7 +45,6 @@ pipeline {
 
     post {
         always {
-            echo 'Limpiando imágenes locales para ahorrar espacio...'
             sh "docker rmi ${DOCKER_IMAGE}:${DOCKER_TAG} || true"
         }
     }
