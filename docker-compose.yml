@@ -68,14 +68,13 @@ services:
 
   # 1. User Service
   user-service-dev:
-    # Usamos la imagen que subiste a Docker Hub (ajusta 'aleemp' si es otro user)
     image: aleemp/m6-sbp-c05-micro-user-service:latest
     container_name: user-service-dev
     ports:
       - "8081:8081"
     environment:
       - SPRING_PROFILES_ACTIVE=dev
-      # Conexión interna a su DB (puerto 5432 interno de Docker)
+
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-user-dev:5432/userdb
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
@@ -97,7 +96,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-product-dev:5432/productdb
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
-      # Conexión al micro de usuarios por nombre de contenedor
+
       - USER_SERVICE_URL=http://user-service-dev:8081
     depends_on:
       postgres-product-dev:
@@ -108,7 +107,7 @@ services:
       - microservice-network
     restart: unless-stopped
 
-  # 3. Order Service (AGREGADO)
+  # 3. Order Service
   order-service-dev:
     image: aleemp/m6-sbp-c05-micro-order-service:latest
     container_name: order-service-dev
@@ -119,7 +118,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order-dev:5432/orderdb
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
-      # Dependencias
+
       - USER_SERVICE_URL=http://user-service-dev:8081
       - PRODUCT_SERVICE_URL=http://product-service-dev:8082
     depends_on:

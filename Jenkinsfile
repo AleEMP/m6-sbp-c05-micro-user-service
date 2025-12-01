@@ -1,44 +1,52 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_IMAGE = 'aleemp/m6-sbp-c05-micro-user-service'
+        DOCKER_TAG = 'latest'
+        DOCKER_CREDS_ID = 'docker-hub-credentials'
+    }
+
     stages {
-        stage('Checkout') {
+        stage('Preparation') {
             steps {
-                echo 'Get source code from repository'
-                checkout scm
+                sh 'chmod +x mvnw'
             }
         }
 
-        stage('Compile') {
+        stage('Build & Test') {
             steps {
-                echo 'Compile the project'
-                sh 'mvn clean compile'
+                echo 'Compilando y Ejecutando Pruebas Unitarias/Integración...'
+                sh './mvnw clean package'
             }
         }
 
-        stage('Test') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Test the project'
-                sh 'mvn test'
-            }
-        }
-        stage('Package') {
-            steps {
-                echo 'Package the project'
-                sh 'mvn package -DskipTests'
+                echo 'Construyendo imagen Docker...'
+                script {
+                    // Construye la imagen usando el Dockerfile del proyecto
+                    dockerImage = docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}")
+                }
             }
         }
 
-
+        stage('Push to Docker Hub') {
+            steps {
+                echo 'Subiendo imagen a Docker Hub...'
+                script {
+                    docker.withRegistry('', DOCKER_CREDS_ID) {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
     }
 
     post {
-        success {
-            echo 'Build completed successfully!'
-        }
-        failure {
-            echo 'Build failed. Please check the logs.'
+        always {
+            echo 'Limpiando imágenes locales para ahorrar espacio...'
+            sh "docker rmi ${DOCKER_IMAGE}:${DOCKER_TAG} || true"
         }
     }
-
 }
