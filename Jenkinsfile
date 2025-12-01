@@ -8,12 +8,14 @@ pipeline {
                 checkout scm
             }
         }
+
         stage('Compile') {
             steps {
                 echo 'Compile the project'
                 sh 'mvn clean compile'
             }
         }
+
         stage('Test') {
             steps {
                 echo 'Test the project'
@@ -26,24 +28,7 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
-        stage('Docker build') {
-            steps {
-                echo 'Build Docker image'
-                sh 'docker build -t user-service-jgm:1.0 .'
-            }
-        }
 
-        stage('Docker Compose Restart') {
-            steps {
-                echo 'Restarting user services'
-                sh """
-                    docker compose up -d postgres-user-dev user-service-dev
-
-                """
-
-
-            }
-        }
 
     }
 
@@ -55,4 +40,5 @@ pipeline {
             echo 'Build failed. Please check the logs.'
         }
     }
+
 }
