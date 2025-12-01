@@ -19,18 +19,23 @@ public class UserService {
 
 
     public User getUserById(Long id){
-
         UserEntity entity = userRepository.findById(id).orElse(null);
-
         return  mapper.toDomain(entity);
     }
 
     public List<User> getAllUsers() {
-
         List<UserEntity> entities = userRepository.findAll();
         return this.mapper.toDomain(entities);
 
     }
 
-    // TO DO
+    public User save(User user) {
+        UserEntity entity = mapper.toEntity(user);
+        UserEntity savedEntity = userRepository.save(entity);
+        return mapper.toDomain(savedEntity);
+    }
+
+    public void deleteById(Long id) {
+        userRepository.deleteById(id);
+    }
 }
